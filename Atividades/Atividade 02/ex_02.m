@@ -15,6 +15,23 @@ s2 = 230; #230
 # y = ya + m*(x-xa)
 
 ys = zeros(255, 1, "uint8"); # Vetor para guardar os Ys
+Pollen = imread("./input/pollen.jpg");
+
+result = zeros(889,889,"uint8"); # Criando uma imagem "zerada/nula"
+result = Pollen; # Copiando a imagem de entrada na imagem "zerada"
+
+# Definindo os pontos
+r1 = 90; #90
+s1 = 30; #30
+
+r2 = 140; #140
+s2 = 230; #230
+
+# Equação da Reta
+# m = (xb-xa)/(yb-ya)
+# y = ya + m*(x-xa)
+
+ys = zeros(255, 1, "uint8"); # Vetor para guardar os Ys
 
 # Do ponto (0,0) até (r1,s1)
 m = s1/r1;
