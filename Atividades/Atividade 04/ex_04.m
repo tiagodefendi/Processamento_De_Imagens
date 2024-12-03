@@ -30,15 +30,23 @@ M = abs(gx) + abs(gy);
 figure(1);
 imshow(imagem);
 
-# imagem com filtro da média com borda de zeros oq aconteceu?
-# a borda está preta, pois utilizamos padding de zeros
+# imagem com filtro da média com borda de zeros
 figure(2);
 imshow(resultado_zeros);
+imwrite(resultado_zeros, "./output/resultado_zeros.jpg");
 
 #imagem com filtro da média com borda de replicação
 figure(3);
 imshow(resultado_replicacao);
+imwrite(resultado_replicacao, "./output/resultado_replicacao.jpg");
 
 #imagem da magnitude do gradiente
 figure(4);
-imshow(M, []);
+imshow(M);
+imwrite(M, "./output/magnitude.jpg");
+
+# ==============================================================================
+# Resposta a pergunta 5
+# 5. Exiba a imagem resultante do passo 4 e observe a borda da imagem.
+# O que aconteceu? Responda essa pergunta nos comentários do código.
+# R: A borda está preta, pois utilizamos padding de zeros.
